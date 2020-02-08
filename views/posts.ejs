@@ -1,0 +1,36 @@
+<div class="container custom-container-width">
+  <% if(user) { %>
+    <h2>您好  <%= user.username %> 歡迎您回來 !</h2>
+  <% } %>
+  <%- include('./partials/form') %>
+ 
+  <div class="posts">
+    <% posts.forEach((item, index) => { %>
+      <div class="card">
+        <div class="card-header posts-header-flex">
+          <h3 class="card-title"><%= item.author %></h3> 
+          <% if(user) { %>
+            <% if(user.id == item.user_id) { %>
+            <div class="posts-UD-box">
+              <button class="posts-update-ajax" data-id="<%= item._id %>">編輯</button>
+              <button class="posts-delete-ajax" data-id="<%= item._id %>">刪除</button>         
+            </div>
+            <% } %>
+          <% } %>
+        </div>
+       
+        <div class="card-body">
+          <div class="card-body-content"><%= item.content  %></div>  
+          <textarea class="edit-content update-hide" name="content" cols="30" rows="5" maxlength="100" ></textarea>
+          <button class="edit-btn update-hide" data-id="<%= item._id %>">送出</button> 
+        </div>
+        <div class="posts-time"><%= item.time %></div>
+      </div>
+      
+    <% }) %>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="/javascript/posts_main.js"></script> 

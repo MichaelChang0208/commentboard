@@ -1,0 +1,236 @@
+/*global*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*讓footer置底的方法*/
+html{
+    height:100% ;
+}
+body{
+    min-height:100%;
+    position: relative;
+    background:linear-gradient(to right,hsl(200,100%,8%),hsl(200,100%,16%));
+}
+#footer-bottom{
+    padding-bottom:50px;
+}
+/*footer*/
+ .footer{
+    height:50px;
+    width:100%;
+    background:linear-gradient(to right,hsl(200,100%,8%),hsl(200,100%,16%));
+    position:absolute;
+    bottom:0;
+    margin-top:-50px;
+    color:hsl(200,100%,87%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}  
+/*posts.ejs container*/
+.container{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.container h2{
+    color:hsl(200,100%,87%);
+    text-align: center;
+}
+/*秀出幾則留言*/
+.total{
+    font-size: 20px;
+    color:hsl(200,100%,87%);
+    text-align: left;
+    padding-bottom:10px;
+}
+.custom-container-width{
+    max-width:760px;
+}
+.card{
+    margin-bottom:20px;
+}
+.posts-header-flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newpost-header-flex{
+    display:flex;
+}
+.newpost-username{
+    margin-right:5px;
+}
+.card-title{
+    font-size:20px;
+    margin-bottom: 0;
+}
+/*留言上的時間*/
+.posts-time{
+    position: absolute;
+    bottom:15px;
+    right:15px;
+    color:#fff;
+    background: hsl(200,100%,16%);
+}
+/*留言上的編輯跟刪除*/
+
+/*delete btn*/
+.posts-delete-ajax{
+    background: hsl(200,100%,16%);
+    color:#fff;
+    padding:3px;
+    border-radius: 5px;
+    margin-left:10px;
+}
+.posts-update-ajax{
+    background: hsl(200,100%,16%);
+    color:#fff;
+    padding:3px;
+    border-radius: 5px;
+}
+.card-body{
+    position: relative;
+    background:hsl(200,100%,16%);
+    border: 1px solid hsl(200,100%,87%);
+    height:200px;
+    color:hsl(200,100%,87%);
+    word-break: break-all;
+}
+#textarea{
+    width:100%;
+    color:#000;
+}
+#input{
+    color:#000;
+}
+.submit-box{
+    text-align: right;
+}
+/*nav*/
+nav{
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+nav a{
+    margin-left:10px;
+}
+/*register and login page*/
+.registerandlogin-card{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.form-base{
+    background-color: #fff;
+    padding: 15px 23px 25px 23px;
+}
+.form-title{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: hsl(200,100%,30%);
+    font-weight: bold;
+    font-size: 18px;
+}
+h4{
+    font-size: 16px;
+    text-align: center;
+}
+.register-login-btn{
+    background-color: hsl(200,100%,30%);
+    color:#fff;
+    width:100%;
+    border-radius: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.register-login{
+    width:100%;
+    display:inline-block;
+    background-color: hsl(200,100%,30%);
+    text-decoration: none;
+    color:#fff;
+    text-align: center;
+    padding-top:15px;
+    padding-bottom:15px;
+    text-decoration:none
+}
+/*還沒登入 新增留言的按鈕*/
+.unlogin-box{
+    background-color: #fff;
+    height:100px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.unlogin-btn{
+    border-radius: 5px;
+    width:150px;
+    padding:10px;
+    display:inline-block;
+    background-color: hsl(200,100%,30%);
+    text-decoration: none;
+    color:#fff;
+    text-align: center;
+}
+.register-login-btn:focus, .register-login-btn:hover {
+    background-color: hsl(200,100%,35%);
+    text-decoration: none;
+    color: #fff;
+}
+.register-login:focus, .register-login:hover {
+    background-color: hsl(200,100%,35%);
+    text-decoration: none;
+    color: #fff;
+}
+.unlogin-btn:focus, .unlogin-btn:hover {
+    background-color: hsl(200,100%,35%);
+    text-decoration: none;
+    color: #fff;
+}
+.label-hide{
+    position: relative;
+}
+.no-show{
+    position: absolute;
+    width:1;
+    height:1;
+    overflow: hidden;
+}
+/*Register errors message*/
+.input_error_msg{
+    margin-top:5px;
+    color: #a94442;
+    text-align: center;
+}
+.logout{
+    text-align: center;
+}
+/*UPDATE PART*/
+.update-hide{
+    display:none;
+}
+.edit-content{
+    width:100%;
+}
+.edit-btn{
+    border-radius: 5px;
+    padding:5px;
+    background: hsl(200,100%,30%);
+    color:#fff;
+}
+@media(max-width:767px){
+    h2{
+        font-size:20px;
+    }
+}

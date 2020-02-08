@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="registerandlogin-card">
+        <div class="form-base">
+            <h3 class="form-title">註冊成為會員</h3>
+            <%- include('../partials/form_error_msg') %>
+            <div class="errors-msg"></div>
+            <form action="/users/register" method="POST">
+                <div class="form-group label-hide">
+                    <label class="no-show" for="username"></label>
+                    <input id="username" class="form-control" placeholder="用戶名" name="username" type="text" />
+                    <div class="input_error_msg username-error-msg"></div>
+                </div>
+               
+                <div class="form-group label-hide">
+                    <label class="no-show" for="email"></label>
+                    <input id="email" class="form-control" placeholder="Email" name="email" type="email" />
+                    <div class="input_error_msg email-error-msg"></div>
+                </div>
+                <div class="form-group label-hide">
+                    <label class="no-show" for="password"></label>
+                    <input id="password" class="form-control" placeholder="密碼" name="password" type="password" />
+                    <div class="input_error_msg password-error-msg"></div>
+                </div>
+                <div class="form-group label-hide">
+                    <label class="no-show" for="password_confirmation"></label>
+                    <input id="password_confirmation" class="form-control" placeholder="再次輸入密碼" name="password_confirmation" type="password" />
+                    <div class="input_error_msg password2-error-msg"></div>
+                </div>
+                <button type="button" id="reg-btn" class="register-login-btn">註冊</button>
+            </form>
+        </div>
+        <a href="/users/login" class="register-login">已有會員按此登入</a>
+    </div>
+</div>
+<script src="/javascript/register_main.js"></script>

@@ -1,0 +1,21 @@
+<% if(user) { %>
+  <div class="newpost">
+    <div class="card">
+      <div class="card-header newpost-header-flex">
+        <h3 class="card-title newpost-username"><%= user.username %></h3>
+        <h3 class="card-title"> - 發表新留言 !!</h3>
+      </div>
+      <div class="card-body">
+        <textarea id="textarea" name="content" cols="30" rows="5" maxlength="100" ></textarea>
+        <div class="submit-box">
+          <button class="btn btn-primary submit">留言</button>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+<% }else{ %>
+  <div class="unlogin-box">
+    <a href="/users/login" class="unlogin-btn">立即登入留言</a>
+  </div>
+<% } %>
